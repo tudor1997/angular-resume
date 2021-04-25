@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="title">My skills</h2>
+
+  <div class="skills-container" >
+    <div class="skill-box" *ngFor="let skill of skills" >
+      <div class="skill-title"  (click)="openModal(); onSelect(skill)">
+        <img src="{{ skill.image }}" alt="" >
+        <h3 class="skill-name" > {{ skill.name }}</h3>
+      </div>
+      <div class="percentage-container" #percentage *ngIf="selectedSkill">
+        <div class="percentage-header">
+          <button class="close" (click)="closeModal()"><i class="fas fa-window-close"></i></button>
+        </div>
+        <div class="percentage-content">
+            <h3 class="percentage-name" >{{selectedSkill.name}}</h3>
+           <progress-bar [progress]="selectedSkill.value"
+            [color-degraded]="{'30' : 'red','45': '#ff9933', '50': '#ffcc00', '65': '#33ccff', '80': 'green'}"></progress-bar>
+        </div>
+      </div>
+      <div id="overlay" #overlay (click)="closeModal()"></div>
+    </div>
+
+  </div>
+<app-portfolio></app-portfolio>
+</div>

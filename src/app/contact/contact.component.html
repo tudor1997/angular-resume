@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="second-container">
+    <div class="information-column">
+      <h2 class="information-title">Information</h2>
+      <ul class="information-content">
+        <li class="info-elem"><i class="fas fa-user"></i> Tudor Anastasiu</li>
+        <li class="info-elem"><i class="fas fa-phone"></i> +0753801123</li>
+        <li class="info-elem"><a href="mailto:anastasiu.tudor@gmail.com"><i class="fas fa-envelope-square"></i>  anastasiu.tudor@gmail.com</a></li>
+        <li class="info-elem"><i class="fas fa-birthday-cake"></i> 03.04.1997</li>
+        <li class="info-elem"><i class="fas fa-map-marker-alt"></i> Iasi, Romania</li>
+      </ul>
+    </div>
+    <div class="location-column">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86818.64968366548!2d27.516930793492783!3d47.15623268907305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7cf639ddbb%3A0x7ccb80da5426f53c!2zSWHImWk!5e0!3m2!1sro!2sro!4v1619298007979!5m2!1sro!2sro"
+       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="contact-column">
+    <h2 class="information-title">Contact me</h2>
+    <div class="success" #success>
+      Your message has been sent!
+    </div>
+    <div class="contact-content">
+        <form action="" [formGroup]="myForm"  (ngSubmit)="createMessage()">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your First Name" formControlName="firstName">
+            <label for="name" class="form-label">First Name</label>
+            <div class="error" *ngIf="firstName.invalid && firstName.touched">
+                The first name is invalid. You have to enter minimum 2 characters.
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Last Name" formControlName="lastName">
+            <label for="name" class="form-label">Last Name</label>
+            <div class="error" *ngIf="lastName.invalid && lastName.touched">
+              The last name is invalid. You have to enter minimum 2 characters.
+          </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="example@example.com" formControlName="email">
+            <label for="email" class="form-label">Email</label>
+            <div class="error" *ngIf="email.invalid && email.touched">
+              Your email address is invalid.
+          </div>
+          </div>
+          <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Message" formControlName="message"></textarea>
+            <label for="message" class="form-label">Message</label>
+            <div class="error" *ngIf="message.invalid && message.touched">
+              Your message is invalid. You have to enter minimum 3 characters.
+          </div>
+          </div>
+          <button type="submit" class="submit" [disabled]="!myForm.valid " >Submit</button>
+        </form>
+
+    </div>
+  </div>
+</div>

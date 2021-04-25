@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="logo">
+    <h2 class="logo-name">Tudor</h2>
+  </div>
+  <div class="hamburger" (click)="openNavbar()"><i class="fas fa-bars"></i></div>
+  <div class="navigation" #navigation>
+    <ul class="navbar-routing">
+      <li class="nav-elem" (click)="closeNavbar()" ><a routerLink="/home"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li class="nav-elem" (click)="closeNavbar()"><a routerLink="/about"
+         routerLinkActive="active" >About</a></li>
+      <li class="nav-elem" (click)="closeNavbar()"><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+      <li class="nav-elem" (click)="closeNavbar()"><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  <ul class="socials">
+    <li class="social-elem"><a href="https://www.instagram.com/tudor.anastasiu/"><i class="fab fa-instagram"></i></a></li>
+    <li class="social-elem"><a href="https://www.facebook.com/anastasiu.tudor1/"><i class="fab fa-facebook"></i></a></li>
+    <li class="social-elem"><a href="https://github.com/tudor1997"><i class="fab fa-github-square"></i></a></li>
+    <li class="social-elem"><a href="https://www.linkedin.com/in/tudor-anastasiu-02a1201b8/"><i class="fab fa-linkedin"></i></a></li>
+  </ul>
+  <div class="closeMenu" (click)="closeNavbar()"><i class="fas fa-times"></i></div>
+  </div>
+
+</div>
+

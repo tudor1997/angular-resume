@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "anastasiu-tudor": {
+      "hosting": {
+        "myResume": [
+          "anastasiu-tudor"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "anastasiu-tudor"
+  }
+}

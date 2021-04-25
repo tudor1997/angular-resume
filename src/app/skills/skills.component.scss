@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+.container{
+  width: 100%;
+  margin-bottom:100px;
+  display:flex;
+  flex-direction: column;
+}
+.title{
+    font-size:30px;
+    text-align: center;
+    padding:20px 0px 15px 20px;
+    color:#4b86c2;
+    font-family: 'Akaya Telivigala', cursive;
+  }
+.skills-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+.skill-box{
+  width: 350px;
+  height: 350px;
+  cursor:pointer;
+}
+.skill-title{
+  height:100%;
+  padding:20px;
+}
+.skill-title h3{
+  text-align: center;
+  color:#09498a;
+  font-family: 'Akaya Telivigala', cursive;
+  margin-bottom:10px;
+}
+.skill-title img{
+  border-radius:10%;
+  object-fit: cover;
+  width: 100%;
+height: 100%;
+margin-bottom:5px;
+transition: all 0.3s ease-in-out;
+box-shadow: 1px 4px 13px 0.7px rgb(60, 116, 134);
+}
+.skill-title img:hover{
+  box-shadow: 1px 4px 13px 0.7px rgb(5, 29, 37);
+}
+
+.percentage-container{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border:1px solid black;
+  border-radius:10px;
+  padding:20px;
+  z-index:10;
+  background-color:#4b86c2;
+  width:500px;
+  max-width: 80%;
+}
+.percentage-container.active {
+  transform: translate(-50%, -50%) scale(1);
+
+}
+.percentage-header{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  padding:5px;
+}
+.close{
+  background-color:#4b86c2;
+  width:35px;
+  height:30px;
+  border-radius: 10%;
+  font-size: 25px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
+.close i{
+  color:white;
+}
+#overlay{
+  position:fixed;
+  opacity:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events:none;
+}
+#overlay.active{
+  opacity:1;
+  pointer-events: all;
+}
+
+.percentage-name{
+  text-align: center;
+  font-family: 'Akaya Telivigala', cursive;
+  color:whitesmoke;
+  font-size:22px;
+}
+
+
+@media (max-width: 450px){
+.skill-box{
+  width: 315px;
+  height: 325px;
+}
+}
