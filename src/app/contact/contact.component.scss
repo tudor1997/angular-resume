@@ -188,3 +188,19 @@ form textarea:not(:placeholder-shown) + .form-label{
     width:80%;
   }
 }
+@media (max-width:400px){
+  .information-column{
+    width:360px;
+  }
+  .contact-content{
+    height:500px;
+  }
+}
+@media (max-width:280px){
+  .information-column{
+    width:280px;
+  }
+  .contact-content{
+    height:530px;
+  }
+}
