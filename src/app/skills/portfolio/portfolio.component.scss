@@ -77,8 +77,10 @@
   color:white;
   font-size: 2rem;
   position:absolute;
+  width: 100%;
+  text-align:center;
   bottom:5%;
-  left:45%;
+
   font-family: 'Akaya Telivigala', cursive;
 }
 
@@ -94,7 +96,7 @@
 
 @media  (max-width:570px){
   .caption{
-    left:40%;
+    left:0%;
   }
   .portfolio-content{
     padding:0px;
@@ -115,7 +117,7 @@
     height:69%;
   }
   .caption{
-    left:30%;
+    left:0%;
     font-size:1.9rem;
   }
 }

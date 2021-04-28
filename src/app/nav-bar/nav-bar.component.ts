@@ -18,6 +18,6 @@ export class NavBarComponent implements OnInit {
     this.navigation.nativeElement.style.top = "0";
   }
   closeNavbar(){
-    this.navigation.nativeElement.style.top = "-110%";
+    this.navigation.nativeElement.style.top = "-130%";
   }
 }
