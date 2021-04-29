@@ -5,7 +5,12 @@
   margin-bottom:100px;
   display:flex;
   flex-direction: column;
+  animation: opacity 0.8s ease-in-out;
 }
+@keyframes opacity{
+  0%{ opacity: (0.6)}
+  100%{ opacity: (1)}
+ }
 .title{
     font-size:30px;
     text-align: center;
@@ -46,7 +51,7 @@ transition: all 0.3s ease-in-out;
 box-shadow: 1px 4px 13px 0.7px rgb(60, 116, 134);
 }
 .skill-title img:hover{
-  box-shadow: 1px 4px 13px 0.7px rgb(5, 29, 37);
+  box-shadow: 1px 4px 13px 2.7px rgb(5, 29, 37);
 }
 
 .percentage-container{

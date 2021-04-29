@@ -3,9 +3,12 @@
   display:flex;
   margin-bottom:148px;
  flex-direction: column;
-
-
+animation: opacity 0.8s ease-in-out;
 }
+@keyframes opacity{
+  0%{ opacity: (0.6)}
+  100%{ opacity: (1)}
+ }
 .second-container{
   display:flex;
   flex-direction: row;
@@ -133,7 +136,6 @@ form textarea:not(:placeholder-shown) + .form-label{
 .submit{
   align-self: flex-end;
   margin-right:8%;
-
   padding:9px;
   color:white;
   font-size:16px;
@@ -146,7 +148,7 @@ form textarea:not(:placeholder-shown) + .form-label{
   right:0%;
 }
 .submit:hover{
-  background-color:#4e89c4;
+ opacity: 0.8;
 }
 .success{
   width:250px;
@@ -194,6 +196,9 @@ form textarea:not(:placeholder-shown) + .form-label{
   }
   .contact-content{
     height:500px;
+  }
+  .success {
+    font-size:16px;
   }
 }
 @media (max-width:280px){
