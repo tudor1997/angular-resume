@@ -12,6 +12,7 @@ animation: opacity 0.8s ease-in-out;
 .second-container{
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .information-column{
   margin:20px;
