@@ -11,11 +11,20 @@
   justify-content: space-between;
 }
 .logo-name{
+  display:flex;
+  align-items:center;
+}
+.logo-name a{
   color:rgba(216, 216, 216, 0.932);
   font-family: 'Katarina', cursive;
   padding:10px;
   margin:auto;
   cursor: default;
+  cursor:pointer;
+  text-decoration:none;
+}
+.logo-name a:hover{
+  color:#4b86c2;
 }
 .navigation{
   display:flex;
