@@ -9,13 +9,16 @@
   align-items: center;
   justify-content:center;
   box-shadow: 1px 1px 8px 3px black;
-
-}
-.text{
-  font-size:20px;
-}
-@media (max-width:1000px){
+.description{
+  .text{
+    font-size:20px;
+  }
+  @media (max-width:1000px){
   .text{
     font-size:1.1rem;
   }
 }
+}
+}
+
+

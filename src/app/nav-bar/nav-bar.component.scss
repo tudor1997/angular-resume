@@ -5,132 +5,157 @@
   height: 4rem;
   background-color: rgb(21, 39, 88);
   box-shadow: 1px 1px 8px 3px;
-  border-radius:2px;
-  padding:5px;
-  display:flex;
+  border-radius: 2px;
+  padding: 5px;
+  display: flex;
   justify-content: space-between;
-}
-.logo-name{
-  display:flex;
-  align-items:center;
-}
-.logo-name a{
-  color:rgba(216, 216, 216, 0.932);
-  font-family: 'Katarina', cursive;
-  padding:10px;
-  margin:auto;
-  cursor: default;
-  cursor:pointer;
-  text-decoration:none;
-}
-.logo-name a:hover{
-  color:#4b86c2;
-}
-.navigation{
-  display:flex;
-}
-.navbar-routing{
-  color:whitesmoke;
-  display:flex;
-  list-style-type: none;
 
-}
-.nav-elem{
-  padding:10px;
-  margin:auto;
-  cursor: pointer;
-  font-size:17px;
-  font-family: 'Roboto', sans-serif;
-}
-.nav-elem::after{
-  content: '';
-  display:block;
-  width:0;
-  height:2px;
-  background:white;
-  transition: width .3s;
-}
-.nav-elem:hover::after{
-  width: 100%;
-  transition: width .3s;
-}
-.nav-elem a {
-  color:white;
-  text-decoration: none;
-}
-.socials{
-  list-style-type: none;
-  color:whitesmoke;
-  display:flex;
-}
-.social-elem{
-  padding:10px;
-  font-size:17px;
-  margin:auto;
-  cursor:pointer;
-}
-.social-elem a{
-  color:whitesmoke;
-}
-.social-elem a:hover{
-  color: rgb(118, 160, 228);
-}
-.nav-elem a.active{
-  color: rgb(118, 160, 228);
-}
-.hamburger {
-  color: white;
-  font-size: 2rem;
-  display: none;
-  cursor: pointer;
-}
-.closeMenu {
-  color: white;
-  font-size: 2rem;
-  display: none;
-  cursor: pointer;
-}
-
-@media  (max-width: 800px){
-   .navigation{
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgb(21, 39, 88);
-    flex-direction: column;
-    justify-content: center;
+  .logo-name {
+    display: flex;
     align-items: center;
-    transition: top 1s ease-in-out;
-    display: none;
-  }
-.navbar-routing{
-  flex-direction: column;
-}
-.nav-elem::after{
-  display: none;
-}
-.nav-elem a:hover{
-  color: rgb(118, 160, 228);
 
-}
-  .closeMenu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    a {
+      color: rgba(216, 216, 216, 0.932);
+      font-family: 'Katarina', cursive;
+      padding: 10px;
+      margin: auto;
+      cursor: default;
+      cursor: pointer;
+      text-decoration: none;
+      text-shadow: 2px 2px black;
+
+      &:hover {
+        color: #4b86c2;
+      }
+    }
+
   }
+
   .hamburger {
-    display: block;
-    padding: 10px;
+    color: white;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
   }
-  .nav-elem {
-    padding: 10px;
-    font-size: 1.6rem;
+
+  .navigation {
+    display: flex;
+
+    .navbar-routing {
+      color: whitesmoke;
+      display: flex;
+      list-style-type: none;
+
+      .nav-elem {
+        padding: 10px;
+        margin: auto;
+        cursor: pointer;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &.active {
+            color: rgb(118, 160, 228);
+          }
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: white;
+          transition: width .3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+          transition: width .3s;
+        }
+      }
+    }
+
+    .closeMenu {
+      color: white;
+      font-size: 2rem;
+      display: none;
+      cursor: pointer;
+    }
   }
-  .social-elem {
-    font-size: 1.2rem;
+
+  .socials {
+    list-style-type: none;
+    color: whitesmoke;
+    display: flex;
+
+    .social-elem {
+      padding: 10px;
+      font-size: 17px;
+      margin: auto;
+      cursor: pointer;
+
+      a {
+        color: whitesmoke;
+
+        &:hover {
+          color: rgb(118, 160, 228);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hamburger {
+      display: block;
+      padding: 10px;
+    }
+
+    .navigation {
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      background-color: rgb(21, 39, 88);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: top 1s ease-in-out;
+      display: none;
+
+      .navbar-routing {
+        flex-direction: column;
+
+        .nav-elem {
+          padding: 10px;
+          font-size: 1.6rem;
+
+          &::after {
+            display: none;
+          }
+
+          a:hover {
+            color: rgb(118, 160, 228);
+          }
+        }
+      }
+
+      .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    .socials {
+      .social-elem {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
