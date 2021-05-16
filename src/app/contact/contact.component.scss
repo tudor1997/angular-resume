@@ -1,246 +1,324 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
-.container{
-  display:flex;
-  margin-bottom:148px;
- flex-direction: column;
-animation: opacity 0.8s ease-in-out;
-}
-@keyframes opacity{
-  0%{ opacity: (0.6)}
-  100%{ opacity: (1)}
- }
-.second-container{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.information-column{
-  margin:20px;
-  height:500px;
-  width:500px;
-  display:flex;
-  position: relative;
+
+.container {
+  display: flex;
+  margin-bottom: 148px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color:#0d335a;
-  border-radius:50%;
-  box-shadow: 2px 2px 12px 3px;
-  margin-bottom: 50px;
-}
-.small-circle{
-  background-color: rgba(28, 65, 133, 0.815);
-  width:80px;
-  height:80px;
-  position:absolute;
-  border-radius:50%;
-  top:12%;
-  right:1%;
-  box-shadow:0px 0px 7px 1px rgba(13, 45, 105, 0.815);
-}
-.small-circle-two{
-  background-color: rgba(24, 55, 192, 0.616);
-  width:100px;
-  height:100px;
-  position:absolute;
-  border-radius:50%;
-  top:82%;
-  left:14%;
-  box-shadow:0px 0px 12px 2px rgba(10, 10, 12, 0.753);
-}
-.information-title{
-  color:whitesmoke;
-  text-align:center;
-  font-size: 25px;
-  margin-bottom:20px;
-  font-family: 'Akaya Telivigala', cursive;
-}
+  animation: opacity 0.8s ease-in-out;
 
-.information-content{
-display:flex;
-flex-direction:column;
-list-style-type: none;
-}
-.info-elem{
-  color:whitesmoke;
-  font-size:18px;
-  padding:12px;
-}
-.info-elem a{
-  text-decoration:none;
-  color:whitesmoke;
-}
-.info-elem a:hover{
-  color:#5291d1;
-}
-.info-elem i {
-  margin-right:5px;
-}
-.location-column{
-  width:calc(1263px - 500px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.location-column iframe{
-  box-shadow: 1px 1px 6px 2px #1864b1;
-  border-radius:20px;
-}
-.contact-title{
-  color:#4b86c2;
-  text-align:center;
-  font-size: 25px;
-  margin-bottom:20px;
-  font-family: 'Akaya Telivigala', cursive;
-  text-shadow: 1px 1px whitesmoke;
-}
-.contact-column{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.contact-content{
-  width:600px;
-  height:450px;
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  background-color:whitesmoke;
-  border-radius:20px;
-  margin:20px;
-  box-shadow: 1px 1px 6px 2px #1864b1;
-  position:relative;
-}
-form{
-  width:80%;
-}
-.form-group{
-  margin-bottom:1.7em;
-  transition: all .3s;
-}
-.form-label{
-  font-size:1em;
-  color:#aaa;
-  display:block;
-  opacity: 1;
-  transform: translateY(-1.25em);
-  transform-origin: 0 0;
-  transition: all .3s;
- pointer-events: none;
-}
-form .form-group:last-child label{
-  transform: translateY(-2.5em);
-}
-.form-control{
-    box-shadow: none;
-    background-color:rgba(0, 0, 0, 0.02);
-    border-radius:0px;
-    border-color: #ccc;
-    border-style: none none solid none;
-    width: 100%;
-    transition: all .5s;
-    padding:5px;
-    color:#1864b1;
-}
-.form-control::placeholder{
-  color:transparent;
-}
-.form-control:focus{
-    box-shadow: none;
-    outline: none;
-    border-color:#1864b1;
-}
+  .second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
-.form-control:focus + .form-label,
-.form-control:not(:placeholder-shown) + .form-label
-{
-    transform:translateY(-2.5em) scale(.8);
-}
-form:last-child  textarea:focus + .form-label,
-form textarea:not(:placeholder-shown) + .form-label{
-  transform:translateY(-3.6em) scale(.8);
-}
-.form-group:focus-within{
-  transform:scale(1.05, 1.05);
-}
-.error{
-  color:rgb(180, 29, 29);
-  font-size:14px;
-}
-.submit{
-  align-self: flex-end;
-  margin-right:8%;
-  padding:9px;
-  color:white;
-  font-size:16px;
-  border:none;
-  background-color:#1574d3;
-  border-radius:10%;
-  cursor: pointer;
-  position:absolute;
-  bottom:5%;
-  right:0%;
-}
-.submit:hover{
- opacity: 0.8;
-}
-.success{
-  width:250px;
-  background-color:white;
-  height:30px;
-  border-radius:20px;
-  display:flex;
-  align-items: center;
-  justify-content:center;
-  font-size:18px;
-  font-weight:bold;
-  filter:drop-shadow(1px 1px 3px);
-  color:rgb(10, 163, 79);
-  opacity: 0;
-  transition: all .3s ease-out;
-  pointer-events: none;
-}
-.active{
-  opacity: 1;
-}
+    .information-column {
+      margin: 20px;
+      height: 500px;
+      width: 500px;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #0d335a;
+      border-radius: 50%;
+      box-shadow: 2px 2px 12px 3px;
+      margin-bottom: 50px;
 
+      .small-circle {
+        background-color: rgba(28, 65, 133, 0.815);
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 50%;
+        top: 12%;
+        right: 1%;
+        box-shadow: 0px 0px 7px 1px rgba(13, 45, 105, 0.815);
+      }
 
-@media (max-width:1000px){
-  .second-container{
+      .small-circle-two {
+        background-color: rgba(24, 55, 192, 0.616);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+        top: 82%;
+        left: 14%;
+        box-shadow: 0px 0px 12px 2px rgba(10, 10, 12, 0.753);
+      }
+
+      .information-title {
+        color: whitesmoke;
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-family: 'Akaya Telivigala', cursive;
+      }
+
+      .information-content {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        .info-elem {
+          color: whitesmoke;
+          font-size: 18px;
+          padding: 12px;
+
+          i {
+            margin-right: 5px;
+          }
+
+          a {
+            text-decoration: none;
+            color: whitesmoke;
+
+            &:hover {
+              color: #5291d1;
+            }
+          }
+        }
+      }
+    }
+
+    .location-column {
+      width: calc(1263px - 500px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      iframe {
+        box-shadow: 1px 1px 6px 2px #1864b1;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .contact-column {
+    display: flex;
     flex-direction: column;
-    align-items:center;
-    margin-bottom:30px;
+    align-items: center;
+    .success {
+      width: 250px;
+      background-color: white;
+      height: 30px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      filter: drop-shadow(1px 1px 3px);
+      color: rgb(10, 163, 79);
+      opacity: 0;
+      transition: all .3s ease-out;
+      pointer-events: none;
+      &.active {
+        opacity: 1;
+      }
+    }
+    .contact-title {
+      color: #4b86c2;
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 20px;
+      font-family: 'Akaya Telivigala', cursive;
+      text-shadow: 1px 1px whitesmoke;
+    }
+
+
+    .contact-content {
+      width: 600px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: whitesmoke;
+      border-radius: 20px;
+      margin: 20px;
+      box-shadow: 1px 1px 6px 2px #1864b1;
+      position: relative;
+
+      form {
+        width: 80%;
+
+        .form-group {
+          margin-bottom: 1.7em;
+          transition: all .3s;
+
+          &:focus-within {
+            transform: scale(1.05, 1.05);
+          }
+
+          .form-label {
+            font-size: 1em;
+            color: #aaa;
+            display: block;
+            opacity: 1;
+            transform: translateY(-1.25em);
+            transform-origin: 0 0;
+            transition: all .3s;
+            pointer-events: none;
+          }
+
+          &:last-child {
+            label {
+              transform: translateY(-2.5em);
+            }
+          }
+
+
+          .form-control {
+            box-shadow: none;
+            background-color: rgba(0, 0, 0, 0.02);
+            border-radius: 0px;
+            border-color: #ccc;
+            border-style: none none solid none;
+            width: 100%;
+            transition: all .5s;
+            padding: 5px;
+            color: #1864b1;
+
+            &::placeholder {
+              color: transparent;
+            }
+
+            &:focus {
+              box-shadow: none;
+              outline: none;
+              border-color: #1864b1;
+            }
+          }
+
+          .form-control:focus+.form-label,
+          .form-control:not(:placeholder-shown)+.form-label {
+            transform: translateY(-2.5em) scale(.8);
+          }
+
+          .textarea:focus+.form-label,
+          .textarea:not(:placeholder-shown)+.form-label {
+            transform: translateY(-3.6em) scale(.8);
+          }
+
+          .error {
+            color: rgb(180, 29, 29);
+            font-size: 14px;
+          }
+        }
+
+
+        .submit {
+          align-self: flex-end;
+          margin-right: 8%;
+          padding: 9px;
+          color: white;
+          font-size: 16px;
+          border: none;
+          background-color: #1574d3;
+          border-radius: 10%;
+          cursor: pointer;
+          position: absolute;
+          bottom: 5%;
+          right: 0%;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+    }
   }
-  .information-column{
-    width:400px;
+
+@media (max-width:1000px) {
+  .second-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .information-column {
+      width: 400px;
+    }
+    .location-column {
+      width: 70%;
+      iframe {
+        width: 100%;
+      }
+    }
+
   }
-  iframe{
-    width:100%;
-  }
-  .location-column{
-    width:70%;
-  }
-  .contact-content{
-    width:80%;
+  .contact-column {
+    .contact-content {
+      width: 80%;
+    }
   }
 }
-@media (max-width:400px){
-  .information-column{
-    width:360px;
+
+@media (max-width:400px) {
+  .second-container{
+    .information-column {
+      width: 95%;
+    }
   }
-  .contact-content{
-    height:500px;
-  }
+.contact-column{
   .success {
-    font-size:16px;
+    font-size: 16px;
+  }
+  .contact-content {
+    height: 500px;
   }
 }
-@media (max-width:280px){
-  .information-column{
-    width:280px;
+}
+@media (max-width:280px) {
+  .second-container{
+    .information-column {
+      width: 100%;
+    }
   }
-  .contact-content{
-    height:530px;
+  .contact-content {
+    height: 100%;
   }
 }
+
+}
+
+@keyframes opacity {
+  0% {
+    opacity: (0.6)
+  }
+
+  100% {
+    opacity: (1)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
