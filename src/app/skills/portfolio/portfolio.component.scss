@@ -50,6 +50,8 @@
 
     .modal {
       position: fixed;
+      display:flex;
+      justify-content:center;
       opacity: 0;
       top: 0;
       left: 0;
@@ -89,7 +91,26 @@
 
         font-family: 'Akaya Telivigala', cursive;
       }
+      .redirect{
+        color:white;
+        position:absolute;
+        bottom:15%;
+        text-align: center;
+        align-self:center;
+        text-decoration: none;
+        color:whitesmoke;
+        border:2px solid whitesmoke;
+        padding:5px;
+        font-size: 1.1rem;
+        border-radius:10px;
+        transition: 0.2s ease-in;
+        &:hover{
+            color:#4b86c2;
+            border:2px solid #4b86c2;
+        }
+      }
     }
+
   }
 
   @media (max-width: 1000px) {
