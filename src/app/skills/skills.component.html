@@ -2,7 +2,7 @@
   <h2 class="title">My skills</h2>
 
   <div class="skills-container" >
-    <div class="skill-box" *ngFor="let skill of skills" >
+    <div class="skill-box" *ngFor="let skill of skills$" >
       <div class="skill-title"  (click)="openModal(); onSelect(skill)">
         <img src="{{ skill.image }}" alt="" >
         <h3 class="skill-name" > {{ skill.name }}</h3>

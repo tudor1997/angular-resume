@@ -1,6 +1,6 @@
 <h2 class="portfolio-title">My Portfolio</h2>
 <div class="container">
-<div class="portfolio-content" #portfolio *ngFor="let item of portfolio">
+<div class="portfolio-content" #portfolio *ngFor="let item of portfolio$">
     <div class="portfolio-element"  (click)="openModal(); onSelect(item)">
       <h4 class="title">{{ item.name }}</h4>
       <img class="portfolio-img" src="{{ item.img }}">
@@ -8,7 +8,7 @@
     </div>
     <div class="modal" #modal *ngIf="selectedItem" (click)="closeModal()">
       <img src="{{ selectedItem.img }}" alt="" class="full-img" >
-  
+
       <p class="caption"> {{selectedItem.name}} </p>
       <a *ngIf="selectedItem.link" href={{selectedItem.link}} class="redirect"> View application</a>
     </div>
