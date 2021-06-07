@@ -21,13 +21,14 @@ export class SkillsComponent implements OnInit, OnDestroy {
   skills$: SKILL[] = [];
   selectedSkill: SKILL;
   subscription: Subscription;
+  showSpinner:boolean = true;
   @ViewChild('percentage') percentage: ElementRef;
   @ViewChild('overlay') overlay: ElementRef;
 
   constructor(public dbService: DatabaseService) {
     this.subscription = this.dbService.getSkills().subscribe((skills) => {
       this.skills$ = skills;
-      console.log(this.skills$);
+      this.showSpinner = false;
     });
   }
 

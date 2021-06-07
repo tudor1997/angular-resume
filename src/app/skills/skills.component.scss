@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
-
+.container-spinner{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 .container {
   width: 100%;
   margin-bottom: 100px;

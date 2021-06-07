@@ -17,6 +17,7 @@ import { PortfolioComponent } from './skills/portfolio/portfolio.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -31,6 +32,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     PortfolioComponent,
     PageNotFoundComponent,
+    SpinnerComponent,
 
 
   ],

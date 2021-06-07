@@ -1,7 +1,13 @@
-<div class="container">
+<div *ngIf="showSpinner" class="container-spinner">
+  <app-spinner ></app-spinner>
+</div>
+
+
+<div class="container" *ngIf="!showSpinner">
   <h2 class="title">My skills</h2>
 
   <div class="skills-container" >
+
     <div class="skill-box" *ngFor="let skill of skills$" >
       <div class="skill-title"  (click)="openModal(); onSelect(skill)">
         <img src="{{ skill.image }}" alt="" >
