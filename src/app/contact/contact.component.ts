@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { tap, first } from 'rxjs/operators';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
