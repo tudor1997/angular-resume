@@ -111,7 +111,7 @@
         top: 410px;
         left: 210px;
         border-radius: 50%;
-        background-color: rgba(32, 17, 168, 0.822);
+        background-color: rgba(32, 17, 168, 0.418);
         animation: medium-circle-move 2s alternate ease;
       }
     }
@@ -120,12 +120,14 @@
     .text {
       text-align: center;
       font-size: 24px;
-      color: #1c65ad;
+      // color: #1c65ad;
+      color:whitesmoke;
       padding: 10px;
       font-family: 'Inter', sans-serif;
 
       .job {
-        color: #105294;
+        font-weight: bold;
+        color: whitesmoke;
         font-family: 'Inter', sans-serif;
       }
     }
@@ -201,7 +203,13 @@
       &:before {
         display: none;
       }
+      .text{
+        color: #1c65ad;
+        .job{
+          color: #1c65ad;
 
+        }
+      }
       .circles {
         animation: none;
         width: 100%;
