@@ -9,10 +9,12 @@
   .second-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
-
+    width:100%;
+    perspective: 100rem;
     .information-column {
-      margin: 20px;
+      margin: 20px 20px 20px 30px;
       height: 500px;
       width: 500px;
       display: flex;
@@ -24,7 +26,7 @@
       border-radius: 50%;
       box-shadow: 2px 2px 12px 3px;
       margin-bottom: 50px;
-
+      transform:rotateY(20deg);
       .small-circle {
         background-color: rgba(28, 65, 133, 0.815);
         width: 80px;
@@ -64,17 +66,22 @@
           color: whitesmoke;
           font-size: 18px;
           padding: 12px;
-
+          text-shadow: 1px 1px 1px #5291d1;
+          font-weight: 300;
           i {
             margin-right: 5px;
+            font-size:20px;
           }
 
           a {
             text-decoration: none;
             color: whitesmoke;
-
+            font-size: 18px;
+            text-shadow: 1px 1px 1px #5291d1;
+            font-weight: 300;
             &:hover {
               color: #5291d1;
+              text-shadow: 1px 1px 3px #5291d1;
             }
           }
         }
@@ -87,6 +94,7 @@
       justify-content: center;
       align-items: center;
 
+      transform:rotateY(-20deg);
       iframe {
         box-shadow: 1px 1px 6px 2px #1864b1;
         border-radius: 20px;
@@ -237,9 +245,11 @@
     margin-bottom: 30px;
     .information-column {
       width: 400px;
+      transform: rotateY(0);
     }
     .location-column {
       width: 70%;
+      transform: rotateY(0);
       iframe {
         width: 100%;
       }
@@ -257,6 +267,22 @@
   .second-container{
     .information-column {
       width: 95%;
+      .information-title{
+        font-size:18px;
+      }
+      .information-content{
+          .info-elem{
+            font-size:14px;
+            text-shadow:none;
+            i{
+              font-size:14px;
+            }
+            a{
+              font-size:14px;
+              text-shadow:none;
+            }
+          }
+      }
     }
   }
 .contact-column{
@@ -265,17 +291,29 @@
   }
   .contact-content {
     height: 500px;
+    form{
+      .form-group{
+        .error{
+          font-size:13px;
+          font-weight: 500;
+
+        }
+      }
+    }
   }
 }
+
 }
 @media (max-width:280px) {
   .second-container{
     .information-column {
-      width: 100%;
+      width: 90%;
+      height: 450px;
     }
   }
   .contact-content {
     height: 100%;
+
   }
 }
 
