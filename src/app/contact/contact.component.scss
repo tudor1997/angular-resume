@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
     width:100%;
-    perspective: 100rem;
+
     .information-column {
       margin: 20px 20px 20px 30px;
       height: 500px;
@@ -26,7 +26,7 @@
       border-radius: 50%;
       box-shadow: 2px 2px 12px 3px;
       margin-bottom: 50px;
-      transform:rotateY(20deg);
+
       .small-circle {
         background-color: rgba(28, 65, 133, 0.815);
         width: 80px;
@@ -94,7 +94,7 @@
       justify-content: center;
       align-items: center;
 
-      transform:rotateY(-20deg);
+     
       iframe {
         box-shadow: 1px 1px 6px 2px #1864b1;
         border-radius: 20px;
