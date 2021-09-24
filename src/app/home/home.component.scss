@@ -11,7 +11,19 @@
   padding-bottom: 39px;
   margin-bottom: 120px;
 
-
+.frame{
+  width: 93%;
+  height: 82%;
+  position: absolute;
+  margin: 0 auto;
+  border: 4px solid rgba(15, 88, 172, 0.774);
+  opacity:0.6;
+  top: 101px;
+  left: 48px;
+  border-radius:10px;
+  z-index:-100;
+  filter:drop-shadow(1px 1px 8px #000);
+}
 
   .random-circle-two {
     width: 350px;
@@ -121,13 +133,13 @@
       text-align: center;
       font-size: 24px;
       // color: #1c65ad;
-      color:whitesmoke;
+      color:rgb(102, 102, 102);
       padding: 10px;
       font-family: 'Inter', sans-serif;
 
       .job {
         font-weight: bold;
-        color: whitesmoke;
+        color: rgb(102, 102, 102);
         font-family: 'Inter', sans-serif;
       }
     }
@@ -185,9 +197,17 @@
   }
 
   @media (max-width: 1000px) {
+
     flex-direction: column;
     padding-top: 50px;
     margin-bottom:20px;
+    .frame{
+      width: 93%;
+      height: 74%;
+      top: 89px;
+      left: 27px;
+    }
+
     .random-circle {
       display: none;
     }
@@ -199,7 +219,7 @@
     .name-side {
       width: 350px;
       height: 350px;
-
+      margin-left:none;
       &:before {
         display: none;
       }
@@ -253,21 +273,29 @@
       }
     }
   }
-
+@media (max-width:480px){
+.frame{
+  display:none;
+}
+}
   @media (max-width:414px) {
-    .name-side {
-      .medium-circle {
+
+
+      .name-side {
+        .medium-circle {
+          display: none;
+        }
+      }
+
+      .random-circle {
         display: none;
       }
-    }
 
-    .random-circle {
-      display: none;
-    }
+      .random-circle-two {
+        display: none;
+      }
 
-    .random-circle-two {
-      display: none;
-    }
+
   }
 
   @media (max-width:360px) {
@@ -300,8 +328,20 @@
       display: none;
     }
   }
-
+@media(max-width:1240px){
+  .frame{
+    height:100%;
+    width:94%;
+    left:32px;
+  }
+}
   @media (max-width:1145px) {
+
+
+    .frame{
+      left:3px;
+      width: 98%;
+    }
 
     .random-circle-two {
       left: 65%;
@@ -321,9 +361,15 @@
   }
 
   @media (min-height:1366px) {
-    height: 100vh;
-    flex-direction: column;
 
+    flex-direction: column;
+    .container{
+      overflow:hidden;
+
+    }
+    .frame{
+     height:90%;
+    }
     .name-side {
       .text {
         font-size: 30px;
