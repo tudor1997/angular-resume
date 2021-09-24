@@ -399,6 +399,27 @@
     }
   }
 }
+@media(height:600px){
+  .frame{
+    height: 104% !important;
+  }
+}
+@media (width: 768px){
+ .frame{
+  height:77% !important;
+  left:6px !important;
+ }
+}
+@media(min-width:1300px){
+  .frame{
+    height: 100% !important;
+  }
+}
+@media(height:488px){
+  .frame{
+    height: 145% !important;
+  }
+}
 
 @keyframes random-circle {
   0% {
