@@ -20,6 +20,9 @@ export class NavBarComponent implements OnInit {
   }
   closeNavbar(){
     this.navigation.nativeElement.style.top = "-130%";
+    if(window.scrollY){
+      window.scroll(0,0);
+    }
   }
  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
   this.container.nativeElement.style.position = "sticky";
