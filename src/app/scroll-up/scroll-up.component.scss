@@ -1,0 +1,37 @@
+.scroll-btn{
+  position:fixed;
+  bottom: 3%;
+  right: 2%;
+  z-index:-1;
+  border-radius:50%;
+  width:50px;
+  height:50px;
+  box-shadow:1px 1px 10px #4b86c2;
+  background-color:rgba(255, 255, 255, 0.623);
+  color:#4b86c2;
+  font-size:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background-color .3s ease-in-out, opacity .2s ease-in;
+  opacity:0;
+
+
+  &:hover{
+    background-color:white;
+  }
+}
+.active{
+  opacity:1;
+  cursor: pointer;
+  z-index:10;
+  box-shadow:1px 1px 10px #0961b9;
+}
+
+@media(max-width:480px){
+ .scroll-btn{
+  width:45px;
+  height:45px;
+  right: 3%;
+ }
+}

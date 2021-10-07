@@ -52,34 +52,80 @@
       position: fixed;
       display:flex;
       justify-content:center;
+      flex-direction:column;
       opacity: 0;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       transition: 200ms ease-in-out;
-      background-color: rgba(0, 0, 0, 0.692);
+      background-color: rgb(0 0 0 / 91%);
       pointer-events: none;
+      .closeModal{
+        position:absolute;
+        top:6%;
+        right:6%;
+        font-size:35px;
+        color:white;
+        cursor: pointer;
+        width:25px;
+        height:25px;
+        z-index:10;
+        transition:color .2s ease-in-out;
+      &:hover{
+        color:#4b86c2;
+      }
+      }
 
+      .content-modal{
+        display:flex;
+        align-items: center;
+        width: 100%;
+        height: 450px;
+        margin:0 10px;
+        justify-content:center;
+        .description{
+          width:100%;
+         text-align: center;
+          color:whitesmoke;
+          font-size:24px;
+          padding:10px;
+          font-family:"Akaya Telivigala",sans-serif;
+        }
+
+        .image-modal{
+
+          height: 80%;
+          width:100%;
+          border-radius: 20px;
+
+
+          transition: all 0.25s ease-out;
+          .full-img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            &.open {
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+
+        }
+      }
+      .technologies{
+        font-size:22px;
+        color:white;
+        width:100%;
+        text-align: center;
+        font-family: "Akaya Telivigala",sans-serif;
+        margin-bottom:20px;
+      }
       &.active {
         opacity: 1;
         pointer-events: all;
         z-index: 20;
       }
 
-      .full-img {
-        position: absolute;
-        height: auto;
-        border-radius: 20px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(0.5);
-        transition: all 0.25s ease-out;
-
-        &.open {
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
 
       .caption {
         color: white;
@@ -93,7 +139,7 @@
       .redirect{
         color:white;
         position:absolute;
-        bottom:5%;
+        bottom:3%;
         text-align: center;
         align-self:center;
         text-decoration: none;
@@ -118,7 +164,23 @@
     align-items: center;
   }
 
+@media(max-width:769px){
 
+    .portfolio-content{
+      .modal{
+        .content-modal{
+          .description{
+            font-size:18px;
+          }
+        }
+        .closeModal{
+          font-size:30px;
+        }
+      }
+    }
+
+
+}
 
   @media (max-width:570px) {
     .portfolio-content {
@@ -130,6 +192,9 @@
       }
 
       .modal {
+        .closeModal{
+          font-size:25px;
+        }
         .caption {
           left: 0%;
         }
@@ -148,9 +213,31 @@
       }
 
       .modal {
-        .full-img {
-          height: 69%;
+        width:100%;
+        height:100%;
+        margin:0;
+        .content-modal{
+          margin:0;
+          .description{
+            display:none;
+          }
+          .image-modal{
+            width: 90%;
+            height:49%;
+            transform:none;
+            .full-img {
+              height: 98%;
+            }
+          }
         }
+        .technologies{
+          width:100%;
+          text-align: center;
+          left:0;
+          margin:0 auto;
+        }
+
+
 
         .caption {
           left: 0%;
@@ -165,8 +252,27 @@
   @media (max-width: 375px) {
     .portfolio-content {
       .modal {
-        .full-img {
-          height: 63%;
+        width:100%;
+        height:100%;
+        .description{
+          display:none;
+        }
+        .technologies{
+          width:100%;
+          text-align: center;
+          left:0;
+          margin:0 auto;
+          font-size:19px;
+        }
+        .image-modal{
+          width: 90%;
+          left: 5%;
+          top: 24%;
+          height:49%;
+          transform:none;
+          .full-img {
+            height: 60%;
+          }
         }
       }
     }

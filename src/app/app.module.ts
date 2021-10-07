@@ -18,6 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { ScrollUpComponent } from './scroll-up/scroll-up.component';
 
 
 
@@ -33,6 +34,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     PortfolioComponent,
     PageNotFoundComponent,
     SpinnerComponent,
+    ScrollUpComponent,
 
 
   ],

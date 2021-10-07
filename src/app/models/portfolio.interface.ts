@@ -3,4 +3,5 @@ export interface Portfolio {
   img:string;
   description?: string;
   link?: string;
+  technologies?: string;
 }
