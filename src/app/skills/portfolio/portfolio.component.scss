@@ -1,160 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.portfolio-title {
-  font-size: 30px;
-  text-align: center;
-  padding: 20px 0px 15px 20px;
-  color: #4b86c2;
-  font-family: 'Akaya Telivigala', cursive;
-  text-shadow: 1px 1px whitesmoke;
-}
+
 
 .container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 
-  .portfolio-content {
-    padding: 10px;
+  .portfolio-title {
+    font-size: 35px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px 15px 20px;
+    margin:20px auto;
+    color: #4b86c2;
+    font-family: 'Akaya Telivigala', cursive;
+    .line{
+      border-bottom:4px solid #4b86c2;
+      margin-top:10px;
+      width:60%;
 
+    }
+  }
+  .portfolio-content {
+
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    height:100%;
+    justify-content: space-evenly;
     .portfolio-element {
       width: 450px;
       height: 400px;
-      padding: 10px;
-      cursor: pointer;
-
-      .title {
-        text-align: center;
-        font-family: 'Akaya Telivigala', cursive;
-        padding: 15px;
-        font-size: 18px;
-        color: #09498a;
-      }
-
-      .portfolio-img {
-        object-fit: contain;
-        width: 100%;
-        border-radius: 10px;
-        margin-top: 5px;
-        box-shadow: 1px 4px 13px 0.7px #0b2c44;
-        transition: all 0.3s ease-out;
-        cursor: pointer;
-
-        &:hover {
-          transform: scale(1.1);
-          box-shadow: 1px 4px 13px 1.7px #5c9ece;
-          padding: 2px;
-        }
-      }
-    }
-
-    .modal {
-      position: fixed;
-      display:flex;
-      justify-content:center;
-      flex-direction:column;
-      opacity: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transition: 200ms ease-in-out;
-      background-color: rgb(0 0 0 / 91%);
-      pointer-events: none;
-      .closeModal{
-        position:absolute;
-        top:6%;
-        right:6%;
-        font-size:35px;
-        color:white;
-        cursor: pointer;
-        width:25px;
-        height:25px;
-        z-index:10;
-        transition:color .2s ease-in-out;
+      margin:20px 0px;
+      box-shadow:1px 1px 13px #000;
+      background-color:white;
+      border-radius:10px;
+      transition:all .4s ease-in-out;
       &:hover{
-        color:#4b86c2;
+        transform:scale(1.02);
+        box-shadow:1px 1px 13px rgb(77, 93, 231);
       }
-      }
-
-      .content-modal{
-        display:flex;
-        align-items: center;
-        width: 100%;
-        height: 450px;
-        margin:0 10px;
-        justify-content:center;
-        .description{
-          width:100%;
-         text-align: center;
-          color:whitesmoke;
-          font-size:24px;
-          padding:10px;
-          font-family:"Akaya Telivigala",sans-serif;
-        }
-
-        .image-modal{
-
-          height: 80%;
-          width:100%;
-          border-radius: 20px;
-
-
-          transition: all 0.25s ease-out;
-          .full-img {
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-            &.open {
-              transform: translate(-50%, -50%) scale(1);
-            }
-          }
-
-        }
-      }
-      .technologies{
-        font-size:22px;
-        color:white;
+      .project-img-container{
         width:100%;
-        text-align: center;
-        font-family: "Akaya Telivigala",sans-serif;
-        margin-bottom:20px;
-      }
-      &.active {
-        opacity: 1;
-        pointer-events: all;
-        z-index: 20;
-      }
+        height:70%;
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        &:hover::before{
+          opacity:1;
+        }
+        &::before{
+          content:"";
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          background-color:rgba(0, 0, 0, 0.39);
+          opacity:0;
+          border-radius:10px 10px 0px 0px;
+          transition:all .2s ease-in-out;
+        }
+        .project-img{
+          width:100%;
+          height: 100%;
+          object-fit:fill;
+          border-radius:10px 10px 3px 3px;
 
+        }
 
-      .caption {
-        color: white;
-        font-size: 2rem;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        bottom: 88%;
-        font-family: 'Akaya Telivigala', cursive;
-      }
-      .redirect{
-        color:white;
-        position:absolute;
-        bottom:3%;
-        text-align: center;
-        align-self:center;
-        text-decoration: none;
-        color:whitesmoke;
-        border:2px solid whitesmoke;
-        padding:5px;
-        font-size: 1.1rem;
-        border-radius:10px;
-        transition: 0.2s ease-in;
-        &:hover{
-            color:#4b86c2;
-            border:2px solid #4b86c2;
+        &:hover .project-link{
+            opacity:1;
+            z-index:10;
+        }
+        .project-link{
+          font-size:22px;
+          position:absolute;
+          top:50%;
+          background-color:#568abe;
+          color:#09498a;
+          padding:15px;
+          font-weight: 700;
+          border-radius:50%;
+          transition:all .2s ease-in-out;
+          opacity:0;
+          z-index:-1;
+          &:hover{
+              background-color:#09498a;
+              color:white;
+          }
         }
       }
+      .info-container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        height:30%;
+        border-radius:0px 0px 10px 10px;
+        width:100%;
+        background-color:#dde9f8;
+        .info-title{
+          font-family: 'Akaya Telivigala', cursive;
+          color: #09498a;
+          font-size:23px;
+        }
+        .technologies{
+          font-size:16px;
+          font-family:"Montserrat",sans-serif;
+          font-weight: 600;
+          text-align:center;
+          display:flex;
+          list-style:none;
+          width:100%;
+          justify-content:center;
+
+          .tech-item{
+            margin-left:10px;
+            background-color:#abcbeb;
+            padding:4px;
+            border-radius:9px;
+            color:#568abe;
+          }
+        }
+
+      }
+
+
+
     }
+
+
 
   }
 
@@ -164,114 +144,37 @@
     align-items: center;
   }
 
-@media(max-width:769px){
 
-    .portfolio-content{
-      .modal{
-        .content-modal{
-          .description{
-            font-size:18px;
-          }
-        }
-        .closeModal{
-          font-size:30px;
-        }
-      }
-    }
-
-
-}
 
   @media (max-width:570px) {
     .portfolio-content {
       padding: 0px;
 
       .portfolio-element {
-        width: 350px;
+        width: 70%;
         height: 350px;
-      }
-
-      .modal {
-        .closeModal{
-          font-size:25px;
-        }
-        .caption {
-          left: 0%;
-        }
-
-        .full-img {
-          height: 80%;
+        .info-container{
+          .technologies{
+            font-size:14px;
+          }
+          .project-link{
+            font-size:18px;
+          }
         }
       }
     }
   }
 
-  @media (max-width:450px) {
+  @media (max-width:480px) {
     .portfolio-content {
       .portfolio-element {
-        width: 320px;
-      }
-
-      .modal {
-        width:100%;
-        height:100%;
-        margin:0;
-        .content-modal{
-          margin:0;
-          .description{
-            display:none;
+        width: 95%;
+        .info-container{
+          .technologies{
+            font-size:14px;
           }
-          .image-modal{
-            width: 90%;
-            height:49%;
-            transform:none;
-            .full-img {
-              height: 98%;
-            }
-          }
-        }
-        .technologies{
-          width:100%;
-          text-align: center;
-          left:0;
-          margin:0 auto;
-        }
-
-
-
-        .caption {
-          left: 0%;
-          font-size: 1.7rem;
-        }
-      }
-    }
-
-
-  }
-
-  @media (max-width: 375px) {
-    .portfolio-content {
-      .modal {
-        width:100%;
-        height:100%;
-        .description{
-          display:none;
-        }
-        .technologies{
-          width:100%;
-          text-align: center;
-          left:0;
-          margin:0 auto;
-          font-size:19px;
-        }
-        .image-modal{
-          width: 90%;
-          left: 5%;
-          top: 24%;
-          height:49%;
-          transform:none;
-          .full-img {
-            height: 60%;
+          .project-link{
+            font-size:17px;
           }
         }
       }
@@ -279,24 +182,33 @@
   }
 
 
-  @media (max-width: 280px) {
+
+
+  @media (max-width: 320px) {
     .portfolio-content {
       .portfolio-element {
-        width: 280px;
+        width: 90%;
       }
-
-      .modal {
-        .full-img {
-          height: 59%;
+      .info-container{
+        .technologies{
+          font-size:12px;
         }
-
-        .caption {
-          font-size: 1.7rem;
+        .project-link{
+          font-size:16px;
         }
       }
     }
-
-
   }
-
+  @media screen and (max-width:280px){
+    .portfolio-content{
+      .portfolio-element{
+        .project-img-container{
+          height:67%;
+        }
+        .info-container{
+          height:33%;
+        }
+      }
+    }
+  }
 }

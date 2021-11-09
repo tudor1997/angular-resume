@@ -1,30 +1,27 @@
-<h2 class="portfolio-title">My Portfolio</h2>
-<div class="container">
-<div class="portfolio-content" #portfolio *ngFor="let item of portfolio$">
-    <div class="portfolio-element"  (click)="openModal(); onSelect(item)">
-      <h4 class="title">{{ item.name }}</h4>
-      <img class="portfolio-img" src="{{ item.img }}">
 
-    </div>
-    <div class="modal" #modal *ngIf="selectedItem">
-      <div class="content-modal">
-        <div class="image-modal">
-          <img src="{{ selectedItem.img }}" alt="" class="full-img" >
-        </div>
-        <div class="description">
-          <p>
-            {{selectedItem.description}}
-          </p>
-        </div>
+<div class="container">
+  <h2 class="portfolio-title">My Projects
+    <div class="line"></div>
+  </h2>
+<div class="portfolio-content" >
+    <article class="portfolio-element" *ngFor="let item of portfolio$">
+      <div class="project-img-container">
+         <img class="project-img" src="{{ item.img }}">
+         <a href={{item.link}} target="_blank" class="project-link" *ngIf="item.link"><i class="fas fa-external-link-alt"></i></a>
       </div>
-      <div class="technologies">
-        <h3>Technologies:</h3> <span>{{selectedItem.technologies}}</span>
+      <div class="info-container">
+        <h4 class="info-title">
+          {{item.name}}
+        </h4>
+         <ul class="technologies" >
+            <li  *ngFor="let technology of item.technologies" class="tech-item">
+              {{technology.name}}
+            </li>
+         </ul>
+
       </div>
-      <div class="closeModal"  (click)="closeModal()">
-        <i class="fas fa-times-circle"></i>
-      </div>
-      <p class="caption"> {{selectedItem.name}} </p>
-      <a *ngIf="selectedItem.link" href={{selectedItem.link}} class="redirect" target="_blank"> View application</a>
-    </div>
+
+    </article>
+
 </div>
 </div>

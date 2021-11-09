@@ -10,37 +10,22 @@ import { Subscription } from 'rxjs';
 })
 export class PortfolioComponent implements OnInit, OnDestroy {
 portfolio$:Portfolio[] = [];
-selectedItem:Portfolio;
 subscription: Subscription;
-@ViewChild('portfolio') portfolioEl: ElementRef;
-@ViewChild('modal') modal: ElementRef;
-@ViewChild('overlay') overlay: ElementRef;
-  constructor(private database:DatabaseService) {
-   this.subscription = this.database.getPortfolio().subscribe(portfolio => {
-      this.portfolio$ = portfolio;
+technologies:any[];
 
-    })
+  constructor(private database:DatabaseService) {
+
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
   ngOnInit(): void {
-
-  }
-onSelect(item: Portfolio): void {
-  this.selectedItem = item;
-
-}
-  openModal(){
-    if(this.modal == null) return
-    this.modal.nativeElement.classList.add('active');
-
-  }
-
-  closeModal(){
-    if(this.modal == null) return
-    this.modal.nativeElement.classList.remove('active');
-
+    this.subscription = this.database.getPortfolio().subscribe(portfolio => {
+      this.portfolio$ = portfolio;
+      portfolio.map(item => {
+       this.technologies = item.technologies;
+      })
+    })
   }
 }

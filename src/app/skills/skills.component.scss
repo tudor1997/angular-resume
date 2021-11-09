@@ -13,12 +13,21 @@
   animation: opacity 0.8s ease-in-out;
 
   .title {
-    font-size: 30px;
+    font-size: 35px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px 0px 15px 20px;
+    margin:20px auto;
     color: #4b86c2;
     font-family: 'Akaya Telivigala', cursive;
-    text-shadow: 1px 1px whitesmoke;
+    .line{
+      border-bottom:4px solid #4b86c2;
+      margin-top:10px;
+      width:60%;
+
+    }
   }
 
   .skills-container {
@@ -34,7 +43,7 @@
 
       .skill-title {
         height: 100%;
-        padding: 20px;
+        padding:20px;
 
         h3 {
           text-align: center;
@@ -70,13 +79,13 @@
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
       transition: 200ms ease-in-out;
-      border: 1px solid black;
       border-radius: 10px;
       padding: 20px;
       z-index: 10;
       background-color: #4b86c2;
       width: 500px;
       max-width: 80%;
+      box-shadow:1px 1px 7px 1px #000;
 
       &.active {
         transform: translate(-50%, -50%) scale(1);
